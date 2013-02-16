@@ -1,7 +1,8 @@
 var classify = require("rle-classify");
 
 //Converts a narrowband level set into a voxel.js volume
-module.exports = function(volume, voxels, bounds) {
+
+function convertToVoxelJS(volume, voxels, bounds) {
   var lo = bounds[0], hi = bounds[1];
   for(var k=lo[2]; k<hi[2]; ++k) {
     for(var j=lo[1]; j<hi[1]; ++j) {
@@ -11,3 +12,5 @@ module.exports = function(volume, voxels, bounds) {
     }
   }
 }
+
+module.exports = convertToVoxelJS;

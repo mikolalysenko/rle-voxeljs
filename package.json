@@ -1,0 +1,23 @@
+{
+  "name": "rle-voxeljs",
+  "version": "0.0.0",
+  "description": "Narrowband level set to voxeljs conversion tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikolalysenko/rle-voxeljs.git"
+  },
+  "keywords": [
+    "rle",
+    "voxeljs",
+    "voxel",
+    "3d"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "037f88421330e008f912d1da9ace74a094447238"
+}

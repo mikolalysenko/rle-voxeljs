@@ -12,6 +12,12 @@ Then, you can just convert a volume using module.exports:
 
     var bunny_rle = require("rle-rasterize")(require(bunny));
     require("rle-voxeljs")(voxels, bunny_rle, [[-20, -20, -20], [20, 20, 20]]);
+    
+If you just want to initialize your game with a narrowband level set, then it may be more direct to just wrap the classifyPoint function as a generator:
+
+    var testPoint = require("rle-classify").point.bind(null, bunny_rle);
+    var generator = function(x,y,z) { return testPoint([x,y,z]); };
+
 
 The main method is the following:
 
@@ -19,7 +25,7 @@ The main method is the following:
 ---------------------------------------------
 The arguments to the function are as follows:
 
-* `voxels`:  The voxeljs volume object
+* `voxels`:  The voxeljs game object
 * `rle`: A narrowband level set
 * `bounds`: The bounds of the object to convert
 
